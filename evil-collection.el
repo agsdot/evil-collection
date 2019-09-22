@@ -572,9 +572,10 @@ instead of the modes in `evil-collection-mode-list'."
             (run-hook-with-args 'evil-collection-setup-hook
                                 m mode-keymaps))))))
   (when evil-collection-want-unimpaired-p
-    (load (expand-file-name "modes/unimpaired/evil-collection-unimpaired"
-                            evil-collection-base-dir)
-          nil t)
+    (require 'evil-collection-unimpaired)
+    ;;(load (expand-file-name "modes/unimpaired/evil-collection-unimpaired"
+    ;;                        evil-collection-base-dir)
+    ;;      nil t)
     (when (fboundp 'evil-collection-unimpaired-setup)
       (evil-collection-unimpaired-setup))))
 
