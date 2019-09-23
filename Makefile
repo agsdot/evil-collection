@@ -4,6 +4,7 @@ compile:
 	cask exec $(EMACS) -Q -batch			\
 	-L .						\
 	--eval '(setq evil-want-integration nil)'	\
+	--eval '(setq evil-want-keybindings nil)'	\
 	--eval '(setq byte-compile-error-on-warn t)'	\
 	-f batch-byte-compile *.el modes/*/*.el
 
